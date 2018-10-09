@@ -2,7 +2,6 @@ import numpy as np
 import time
 
 def validNumber(number, rowNumber, columnNumber):
-#     print (columnNumber, "column")
     global sudoku
     if number in sudoku[rowNumber]:
         return 0
@@ -45,8 +44,8 @@ def solveSudoku():
 
     print ('evaluation time in seconds:', time.time() - millis)
     print ("number of iterations :",iterations)
-#     print (sudoku)
     print()
+
     for i in range(9):
         print(end="  ")
         for j in range(9):
@@ -80,6 +79,5 @@ for row in sudoku:
         else:
             state.append(1)
     sudokuState.append(state)
-# print (np.array(sudokuState))
 
 solveSudoku()
